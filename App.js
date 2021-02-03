@@ -24,6 +24,7 @@ const App = _ => {
             padding: SIZES.padding3,
           }}
         >
+          
           <NavigationContainer>
             <NavigationScreens />
           </NavigationContainer>
