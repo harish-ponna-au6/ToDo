@@ -4,7 +4,7 @@ import { Text, SafeAreaView, View, StatusBar } from 'react-native';
 import { COLORS, FONTS, SIZES } from './src/constants';
 import { NavigationContainer } from '@react-navigation/native';
 import NavigationScreens from './src/navigation';
-import RNBootSplash from 'react-native-bootsplash';
+// import RNBootSplash from 'react-native-bootsplash';
 import SplashScreen from 'react-native-splash-screen';
 
 const App = _ => {

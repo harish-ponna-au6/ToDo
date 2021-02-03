@@ -39,7 +39,8 @@ export const SIZES = {
   h2: 22,
   h3: 20,
   h4: 18,
-  p: 18,
+  p: 16,
+  small: 12,
 
   // app dimensions
   width,
@@ -47,10 +48,17 @@ export const SIZES = {
 };
 
 export const FONTS = {
-  largeTitle: { fontFamily: 'Poppins-SemiBold', fontSize: SIZES.largeTitle, lineHeight: 55, fontWeight: '700' },
-  h1: { fontFamily: 'Poppins-SemiBold', fontSize: SIZES.h1, lineHeight: 36, fontWeight: '700' },
-  h2: { fontFamily: 'Poppins-SemiBold', fontSize: SIZES.h2, lineHeight: 30, fontWeight: '600' },
-  h3: { fontFamily: 'Poppins-SemiBold', fontSize: SIZES.h3, lineHeight: 22, fontWeight: '500' },
-  h4: { fontFamily: 'Poppins-Medium', fontSize: SIZES.h4, lineHeight: 22, fontWeight: '400' },
-  p: { fontFamily: 'Poppins-Medium', fontSize: SIZES.p, lineHeight: 20, fontWeight: '300' },
+  largeTitle: {
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: SIZES.largeTitle,
+    lineHeight: 55,
+    color: COLORS.black1,
+    fontWeight: '700',
+  },
+  h1: { fontFamily: 'Poppins-SemiBold', fontSize: SIZES.h1, lineHeight: 36, color: COLORS.black1, fontWeight: '700' },
+  h2: { fontFamily: 'Poppins-SemiBold', fontSize: SIZES.h2, lineHeight: 30, color: COLORS.black1, fontWeight: '600' },
+  h3: { fontFamily: 'Poppins-SemiBold', fontSize: SIZES.h3, lineHeight: 22, color: COLORS.black1, fontWeight: '500' },
+  h4: { fontFamily: 'Poppins-Medium', fontSize: SIZES.h4, lineHeight: 22, color: COLORS.black1, fontWeight: '400' },
+  p: { fontFamily: 'Poppins-Medium', fontSize: SIZES.p, lineHeight: 20, color: COLORS.black1, fontWeight: '300' },
+  small: { fontFamily: 'Poppins-Medium', fontSize: SIZES.small, color: COLORS.black1, fontWeight: '300' },
 };
