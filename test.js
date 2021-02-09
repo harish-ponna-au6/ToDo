@@ -1252,6 +1252,7 @@ const icons = [
   'ios-american-football-sharp',
   'ios-analytics',
   'ios-analytics-outline',
+  
   'ios-analytics-sharp',
   'ios-aperture',
   'ios-aperture-outline',

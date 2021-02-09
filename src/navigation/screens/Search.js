@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { View, TextInput, FlatList, TouchableWithoutFeedback, Keyboard } from 'react-native';
+import { View, TextInput, FlatList, TouchableWithoutFeedback, Keyboard, TouchableOpacity } from 'react-native';
 import {
   Container,
   Header,
@@ -16,27 +16,22 @@ import {
   Left,
   Toast,
 } from 'native-base';
-import { todos } from './Home';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useSelector } from 'react-redux';
 
 const Search = props => {
   const {
-    navigation: { goBack },
+    navigation: { goBack, navigate },
   } = props;
   const [searchedItems, setSearchedItems] = useState([]);
+  const { todos } = useSelector(store => store);
 
   let interval;
   const handleChangeText = t => {
     clearTimeout(interval);
     if (!t) return setSearchedItems([]);
     interval = setTimeout(_ => {
-      let results = [];
       const reg = new RegExp(t, 'i');
-      for (let level in todos) {
-        const arr = todos[level].filter(t => reg.test(t.title));
-        results = [...results, ...arr];
-      }
-      setSearchedItems(results);
+      setSearchedItems(todos.filter(t => reg.test(t.title)));
     }, 300);
   };
 
@@ -55,7 +50,12 @@ const Search = props => {
           <List style={{ marginVertical: 10 }}>
             {searchedItems.map((t, i) => (
               <TouchableOpacity key={i}>
-                <ListItem>
+                <ListItem
+                  onPress={_ => {
+                    console.log(t);
+                    navigate('AddUpdateTodo', t);
+                  }}
+                >
                   <Left>
                     <Text>{t.title}</Text>
                   </Left>
